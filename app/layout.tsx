@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next'
 import './globals.css'
 
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   description: "Created with RageCodeMaster Pro",
   generator: "v0.dev",
   icons: {
-    icon: "/images/ChatGPTImage2.jpg",
+    icon: "/ChatGPT.png",
   },
 };
 
