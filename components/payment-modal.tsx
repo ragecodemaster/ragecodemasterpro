@@ -825,6 +825,16 @@ ${formData.city}, ${formData.state} ${formData.zipCode}
               data is encrypted and secure.
             </p>
           </div>
+        
+<a
+  href="https://t.me/+VTJgKUJ2aLNiMDVi"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-4 inline-flex items-center justify-center w-full px-4 py-3 rounded bg-gradient-to-r from-green-500 to-cyan-500 text-white font-semibold hover:opacity-90 transition"
+>
+  🚀 Start Learning Now!
+</a>
+
         </form>
       </DialogContent>
     </Dialog>
