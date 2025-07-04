@@ -1,38 +1,56 @@
+import "./globals.css";
+import { Inter } from "next/font/google";
+import type { Metadata } from "next";
 
-import type { Metadata } from 'next'
-import './globals.css'
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "RageCodeMaster",
-  description: "Created with RageCodeMaster Pro",
-  generator: "v0.dev",
+  title: "RageCodeMaster Pro — Learn React, JavaScript & Python",
+  description:
+    "Unlock your potential as a web developer. Learn React, JavaScript, Python & more. Build real-world projects with guidance from a senior engineer.",
   icons: {
-    icon: "/ChatGPT.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any", type: "image/x-icon" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" }
+    ]
   },
+  openGraph: {
+    title: "RageCodeMaster Pro — Learn React, JavaScript & Python",
+    description:
+      "Unlock your potential as a web developer. Learn React, JavaScript, Python & more. Build real-world projects with guidance from a senior engineer.",
+    url: "https://www.ragecodemaster.digital",
+    siteName: "RageCodeMaster Pro",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "RageCodeMaster Pro"
+      }
+    ],
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "RageCodeMaster Pro — Learn React, JavaScript & Python",
+    description:
+      "Unlock your potential as a web developer. Learn React, JavaScript, Python & more. Build real-world projects with guidance from a senior engineer.",
+    images: ["/og.png"]
+  }
 };
 
 export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+  children
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <head>
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17276899773"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-17276899773');
-            `,
-          }}
-        />
+        <link rel="icon" href="/favicon.ico" sizes="any" type="image/x-icon" />
+        <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
       </head>
-      <body>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
