@@ -10,14 +10,16 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({ onScrollToForm }: HeroSectionProps) {
-  const [showPayment, setShowPayment] = useState(false)
+  const [showPayment, setShowPayment] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
 
   const handleSubmitToTelegram = async () => {
     try {
       await fetch("/api/send-to-telegram", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: "User", email: "user@example.com" }),
+        body: JSON.stringify({ name, email }),
       });
       console.log("Telegram message sent.");
     } catch (error) {
